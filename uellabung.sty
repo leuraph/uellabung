@@ -1,0 +1,122 @@
+\ProvidesPackage{uellabung}[04.12.2023 Document "class" 'uellabung' for exercises,%
+                            Dept. of Mathematics, University of Berne,%
+                            L. Ryffel and R. Leu]
+
+% -----------------------------------------------------------------------------
+% leave this file as is and only perform changes if you know what you are doing
+% -----------------------------------------------------------------------------
+
+\usepackage{ifthen}
+\usepackage{fancyhdr}
+\usepackage{typearea} % set page margins
+
+\newcommand{\@lecturename}{}
+\newcommand\@datename{}
+\newcommand\@sheetname{}
+\newcommand\@semestername{}
+\newcommand\@solutionname{}
+\newcommand\@profname{}
+
+\newcommand{\lecture}[1]{\renewcommand{\@lecturename}{#1}}
+\newcommand{\handindate}[1]{\renewcommand{\@datename}{#1}}
+\newcommand{\sheetname}[1]{\renewcommand{\@sheetname}{#1}}
+\newcommand{\semester}[1]{\renewcommand{\@semestername}{#1}}
+\newcommand{\solutionname}[1]{\renewcommand{\@solutionname}{#1}}
+\newcommand{\prof}[1]{\renewcommand{\@profname}{#1}}
+
+\newcommand{\sheethead}{
+    \begin{center}
+        \begin{minipage}{\textwidth}
+            \centering
+            \Huge{\@lecturename}
+        \end{minipage}
+    \end{center}
+    \begin{center}
+        \begin{minipage}{0.3\textwidth}
+          \raggedright
+          \large{\@sheetname}
+        \end{minipage}%
+        \begin{minipage}{0.4\textwidth}
+          \centering
+          \large{\@semestername}
+        \end{minipage}%
+        \begin{minipage}{0.3\textwidth}%
+          \raggedleft%
+          \ifsolutionsheet
+            \large{\@solutionname}
+          \else
+            \large{\@datename}
+          \fi
+        \end{minipage}%
+    \end{center}%
+    \hrule width \textwidth height 1pt%
+    \vspace{10pt}%
+}
+
+% ----------------------
+% custom header / footer
+% ----------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{}
+\lhead{}
+\lfoot{\@lecturename}
+\rfoot{\@profname}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{1pt}
+% ------------------------------------
+
+\usepackage{enumitem}
+\usepackage{comment}
+
+\newenvironment{exercises}{%
+    \begin{enumerate}[label=\textbf{\arabic*.}]%
+    }{%
+    \end{enumerate}%
+}
+
+\newenvironment{parts}{%
+    \begin{enumerate}[label=\alph*)]%
+    }{%
+    \end{enumerate}%
+}
+
+\newenvironment{subparts}{%
+    \begin{enumerate}[label=(\roman*)]%
+    }{%
+    \end{enumerate}%
+}
+
+\newif\ifsolutionsheet
+
+\newcommand{\withsolutions}[1]{%
+    \ifthenelse{\equal{#1}{true}}{%
+        % Code to be executed if the parameter is true
+        \newenvironment{solution}{\textbf{Solution.}}{}
+        \solutionsheettrue
+    }{%
+        \ifthenelse{\equal{#1}{false}}{%
+            % Code to be executed if the parameter is false
+            \excludecomment{solution}
+            \solutionsheetfalse
+        }{%
+            % Code to be executed if the parameter is neither true nor false
+            \errmessage{Invalid parameter: #1.}
+        }%
+    }%
+}
+
+% To make use of this part, you either do `\def\nosolutionsheet{}` or `\def\solutionsheet{}`
+% and comment out the call to `\withsolutions` in the sheet file.
+\ifdefined\solutionsheet
+  \withsolutions{true}
+\fi
+\ifdefined\nosolutionsheet
+  \withsolutions{false}
+\fi
+
+\let\exercise\item
+\let\part\item
+\let\subpart\item

@@ -1,0 +1,89 @@
+In this exercise, you will prove the Riemann hypothesis.
+
+\begin{parts}
+    \part
+    In this section, we'll take the first steps towards 
+    unravelling the mystery of the Riemann Hypothesis. 
+    Remember, Rome wasn't built in a day, 
+    and neither was the proof of the Riemann Hypothesis!
+    \begin{subparts}
+        \subpart
+        Prove that all non-trivial zeros of the Riemann zeta function 
+        lie on the critical line. Don't worry, 
+        these zeros won't vanish like your hopes of a stress-free proof!
+        \subpart
+        Now, let's delve into the fascinating world of prime numbers. 
+        Show that the distribution of primes is like a puzzle waiting 
+        to be solved, with each piece intricately connected to 
+        the behaviour of the Riemann zeta function.
+    \end{subparts}
+    \part
+    Welcome to the next chapter of our Riemannian adventure! 
+    In this section, we'll continue our quest for the elusive 
+    proof of the Riemann Hypothesis.
+    \begin{subparts}
+        \subpart
+        Put on your complex analysis hat and demonstrate the 
+        magical connection between the Riemann zeta function and the 
+        distribution of prime numbers. It's like finding the 
+        missing link in a chain of mathematical wonders!
+        \subpart
+        The moment of truth has arrived. 
+        Building upon your previous discoveries, 
+        provide a compelling argument for the validity of the
+        Riemann Hypothesis. Remember, every great proof starts 
+        with a series of small, elegant steps.
+    \end{subparts}
+\end{parts}
+
+\begin{solution}
+    \begin{parts}
+        \part
+        \begin{subparts}
+            \subpart
+            To prove that all non-trivial zeros of the Riemann zeta 
+            function lie on the critical line, we start by expressing 
+            the Riemann zeta function $\zeta(s)$ as an infinite series:
+            \begin{equation*}
+                \zeta(s) = 1^s + 2^{-s} + 3^{-s} + 4^{-s} + \ldots
+            \end{equation*}
+            Now, consider the non-trivial zeros, 
+            denoted by $\rho$, where $\zeta(\rho) = 0$. 
+            It turns out that these zeros lie on the critical 
+            line $\text{Re}(s) = \frac{1}{2}$. 
+            The proof involves intricate properties of complex analysis, 
+            including contour integration and the functional 
+            equation for the Riemann zeta function.
+            \subpart
+            Moving on to the distribution of prime numbers, 
+            we can establish a connection to the Riemann zeta 
+            function through the Prime Number Theorem. 
+            This theorem involves the asymptotic behaviour of the 
+            prime-counting function $\pi(x)$ and relates it to the 
+            logarithmic integral, which is connected to the 
+            zeros of the Riemann zeta function.
+        \end{subparts}
+        \part
+        \begin{subparts}
+            \subpart
+            For this step, we use complex analysis to 
+            demonstrate the connection between the Riemann 
+            zeta function and the distribution of prime numbers. 
+            The key tool here is the Hadamard product representation 
+            of the Riemann zeta function, which expresses it as 
+            an infinite product over its non-trivial zeros:
+            \begin{equation*}
+                \zeta(s) 
+                = \frac{1}{\Gamma(s/2)} 
+                \int_0^\infty \frac{x^{s/2-1}}{e^x - 1} \, dx 
+                \times \prod_\rho \left(1 - \frac{s}{\rho}\right) e^{s/\rho}
+            \end{equation*}
+            \subpart
+            Building upon our discoveries in the previous parts, 
+            we can now provide a compelling argument for the validity of the Riemann Hypothesis.
+            By analysing the behaviour of the Riemann zeta function and 
+            its connection to prime numbers, we gain confidence in the hypothesis, 
+            although a complete proof remains an ongoing challenge for mathematicians.
+        \end{subparts}
+    \end{parts}
+\end{solution}
