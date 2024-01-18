@@ -45,7 +45,7 @@ In this exercise, you will prove the Riemann hypothesis.
             function lie on the critical line, we start by expressing 
             the Riemann zeta function $\zeta(s)$ as an infinite series:
             \begin{equation*}
-                \zeta(s) = 1^s + 2^{-s} + 3^{-s} + 4^{-s} + \ldots
+                \zeta(s) = \sum_{n=1}^{\innfty} \frac{1}{n^s}
             \end{equation*}
             Now, consider the non-trivial zeros, 
             denoted by $\rho$, where $\zeta(\rho) = 0$. 
@@ -75,7 +75,7 @@ In this exercise, you will prove the Riemann hypothesis.
             \begin{equation*}
                 \zeta(s) 
                 = \frac{1}{\Gamma(s/2)} 
-                \int_0^\infty \frac{x^{s/2-1}}{e^x - 1} \, dx 
+                \int_0^\infty \frac{x^{s/2-1}}{e^x - 1} \dd x 
                 \times \prod_\rho \left(1 - \frac{s}{\rho}\right) e^{s/\rho}
             \end{equation*}
             \subpart
