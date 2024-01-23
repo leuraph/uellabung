@@ -13,7 +13,7 @@ An example can be found in the `exercises/` folder.
 Exercise sheet files should be found under `sheets/`
 or any subdirectory thereof, e.g. a subdirecctory specifying
 the corresponding semester.
-An example can be found in the `sheets/hs1850` folder.
+An example can be found in the `sheets/hs20` folder.
 
 ## Compilation
 
@@ -32,17 +32,17 @@ To compile individual sheets, run the `compile.sh` script
 on the sheet at hand.
 This automatically outputs two separate files, i.e.
 one with solutions and one without.
-For example, to compile the first exercise sheet of HS1850,
+For example, to compile the first exercise sheet of HS20,
 you do
 ```sh
-./compile.sh sheets/hs1850/sheet_01.tex
+./compile.sh sheets/hs20/sheet_01.tex
 ```
 
 #### Collection of Sheets
 If you want to compile a whole directory, e.g. the sheets for
 a complete semester, you can run the `compile_all_in.sh` script
 on the corresponding directory.
-For example, to compile all files of the HS1850 semester, you do
+For example, to compile all files of the HS20 semester, you do
 ```sh
-./compile_all_in.sh sheets/hs1850
+./compile_all_in.sh sheets/hs20
 ```
