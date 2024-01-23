@@ -1,25 +1,26 @@
 # Uellabung
 This repository serves as a templated repo 
 for any collection of exercise sheets.
+In the following, we describe the intended usage
+of this template.
 
 ## Exercises
-The exercises and their solutions can be found under `/exercises`.
-The naming of the exercises indicates the corresponding chapter in
-the accompanying lecture notes.
-The solutions of each exercise is included the same file.
-An example can be found in the `/exercises` folder.
+The exercises and their solutions should be found under `exercises/`.
+The solution of each exercise should be included in the same file.
+An example can be found in the `exercises/` folder.
 
 ## Exercise Sheets
-The intention is that exercise sheets of a specific semester can be put
-in the `/sheets/<semester>/` folder.
-An example can be found in the `/sheets/hs1850` folder.
+Exercise sheet files should be found under `sheets/`
+or any subdirectory thereof, e.g. a subdirecctory specifying
+the corresponding semester.
+An example can be found in the `sheets/hs1850` folder.
 
 ## Compilation
 
 ### By Hand
 To compile a file with or without solutions, you can set the
 corresponding value in `withsolutions{<bool>}` either to
-`true` or `false`.
+`true` or `false` by hand and then compile the file.
 
 ### Automated
 
