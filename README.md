@@ -1,8 +1,23 @@
 # Uellabung
 This repository serves as a templated repo 
 for any collection of exercise sheets.
-In the following, we describe the intended usage
-of this template.
+An example is included.
+Using this repo:
+- Any exercise and its solution can
+  be stored in the same file.
+- Exercise sheets are constructed by inputting
+  the exercise files.
+- Compilation of exercise sheets with or without 
+  solutions is simply specified by setting a flag
+  inside the sheet's source file.
+- Course specific information such as the name
+  of the teacher or the name of the course is 
+  specified by using pre-defined commands 
+  (see the example sheet).
+
+<img alt="" src="sheet_01.jpeg">
+
+<img alt="" src="sheet_01_solutions.jpeg">
 
 ## Exercises
 The exercises and their solutions should be found under `exercises/`.
