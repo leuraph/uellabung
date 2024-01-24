@@ -14,6 +14,9 @@ Using this repo:
   of the teacher or the name of the course is 
   specified by using pre-defined commands 
   (see the example sheet).
+- Handling of numbering and indentation is done
+  automatically, you only need to specify order
+  and parts/subparts.
 
 <img alt="" src="sheet_01.jpeg">
 
