@@ -94,7 +94,7 @@
 \newcommand{\withsolutions}[1]{%
     \ifthenelse{\equal{#1}{true}}{%
         % Code to be executed if the parameter is true
-        \newenvironment{solution}{\textbf{Solution.}}{}
+        \newenvironment{solution}{\textbf{\@solutionname.}}{}
         \solutionsheettrue
     }{%
         \ifthenelse{\equal{#1}{false}}{%
