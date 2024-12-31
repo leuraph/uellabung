@@ -30,6 +30,7 @@
 \newcommand\@sheetname{}
 \newcommand\@semestername{}
 \newcommand\@solutionname{}
+\newcommand\@exercisename{}
 \newcommand\@profname{}
 
 \newcommand{\lecture}[1]{\renewcommand{\@lecturename}{#1}}
@@ -37,6 +38,7 @@
 \newcommand{\sheetname}[1]{\renewcommand{\@sheetname}{#1}}
 \newcommand{\semester}[1]{\renewcommand{\@semestername}{#1}}
 \newcommand{\solutionname}[1]{\renewcommand{\@solutionname}{#1}}
+\newcommand{\exercisename}[1]{\renewcommand{\@exercisename}{#1}}
 \newcommand{\prof}[1]{\renewcommand{\@profname}{#1}}
 
 \newcommand{\sheethead}{
@@ -140,7 +142,7 @@
 {\section} % Section type being modified
 [block] % Shape type, can be: hang, block, display, runin, leftmargin, rightmargin, drop, wrap, frame
 {\large\bfseries} % Format of the whole section
-{Aufgabe~\thesection} % Format of the section label
+{\@exercisename~\thesection} % Format of the section label
 {6pt} % Space between the title and label
 {} % Code before the label
 
