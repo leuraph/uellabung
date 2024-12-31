@@ -18,9 +18,9 @@ Using this repo:
   automatically, you only need to specify order
   and parts/subparts.
 
-<img alt="" src="sheet_01.jpeg">
+<img alt="" src="sheet_01.png">
 
-<img alt="" src="sheet_01_solutions.jpeg">
+<img alt="" src="sheet_01_solutions.png">
 
 ## Exercises
 The exercises and their solutions should be found under `exercises/`.
